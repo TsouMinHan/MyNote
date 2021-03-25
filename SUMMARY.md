@@ -28,4 +28,12 @@
 * [JAVA](java/README.md)
   * [檔案處理](java/dang-an-chu-li.md)
   * [Swing](java/swing.md)
+* [JavaScript](javascript/README.md)
+  * [CKEditor 4 網頁文字編輯器](javascript/ckeditor-4-wang-ye-wen-zi-bian-ji-qi.md)
+  * [Vue 筆記](javascript/vue-bi-ji.md)
+  * [JavaScrpt 30](javascript/javascrpt-30/README.md)
+    * [Day 2：CSS + JS Clock](javascript/javascrpt-30/day-2-css-+-js-clock.md)
+    * [Day 3：Playing with CSS Variables and JS](javascript/javascrpt-30/day-3-playing-with-css-variables-and-js.md)
+    * [Day 4：Array Cardio Day 1](javascript/javascrpt-30/day-4-array-cardio-day-1.md)
+    * [Day 5：Flex Panel Gallery](javascript/javascrpt-30/day-5-flex-panel-gallery.md)
 
