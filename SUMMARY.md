@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Python](README.md)
+* [README](README.md)
 * [Python](python/README.md)
   * [Firebase 相關](python/firebase-xiang-guan-1/README.md)
     * [Firebase Cloud Firestore 新增刪除修改（CRUD）](python/firebase-xiang-guan-1/firebase-cloud-firestore-xin-zeng-shan-chu-xiu-gai-crud.md)
