@@ -23,6 +23,7 @@
   * [Auto Hot Key （AHK）](qi-ta/auto-hot-key-ahk.md)
   * [VSCode 設定](qi-ta/vscode-she-ding.md)
   * [VSCode 快捷鍵](qi-ta/vscode-kuai-jie-jian.md)
+  * [安裝 window 10 IOT core 在樹莓派 3，並部署範例程式](qi-ta/an-zhuang-window-10-iot-core-zai-shu-mei-pai-3-bing-bu-shu-fan-li-cheng-shi.md)
 * [讀書心得](du-shu-xin-de/README.md)
   * [Soft Skills 軟實力｜軟體開發人員的生存手冊](du-shu-xin-de/soft-skills-ruan-shi-li-ruan-ti-kai-fa-ren-yuan-de-sheng-cun-shou-ce.md)
 * [JAVA](java/README.md)
