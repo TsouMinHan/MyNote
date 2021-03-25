@@ -26,6 +26,7 @@
   * [安裝 window 10 IOT core 在樹莓派 3，並部署範例程式](qi-ta/an-zhuang-window-10-iot-core-zai-shu-mei-pai-3-bing-bu-shu-fan-li-cheng-shi.md)
 * [讀書心得](du-shu-xin-de/README.md)
   * [Soft Skills 軟實力｜軟體開發人員的生存手冊](du-shu-xin-de/soft-skills-ruan-shi-li-ruan-ti-kai-fa-ren-yuan-de-sheng-cun-shou-ce.md)
+  * [軟體工程師職場技巧](du-shu-xin-de/ruan-ti-gong-cheng-shi-zhi-chang-ji-qiao.md)
 * [JAVA](java/README.md)
   * [檔案處理](java/dang-an-chu-li.md)
   * [Swing](java/swing.md)
