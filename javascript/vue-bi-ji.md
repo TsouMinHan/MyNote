@@ -18,6 +18,8 @@ let vm = new Vue({ // 可以直接 new Vue 前面省略
     //     options: [],
     //     result: []
     // }
+    mounted: {
+    },
     computed: { // 資料處理，隨著資料變動，有catch機制，會一直存在，一些需要運算的可以寫在這邊，大致上就是在讀取資料時需要經過些篩檢時需要用到
         today(){  // 讀取
             return 1
