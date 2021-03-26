@@ -14,7 +14,7 @@
 
 ```bash
  pip freeze > requirements.txt
- pip -r requirements.txt
+ pip install -r requirements.txt
 ```
 
 ## 虛擬環境
