@@ -1,10 +1,13 @@
 # datetime
 
-* 轉換型態
-* 天數相加 
-* 算時間差 
+## 取得時間
 
-轉換型態
+```python
+# get datetime by timestamp datetime.datetime(2021, 3, 10, 0, 0)
+datetime.fromtimestamp(1615305600) 
+```
+
+## 轉換型態
 
 ```python
 # datetime to string
@@ -14,13 +17,13 @@ datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 datetime.datetime.strptime("2014-12-31 18:20:10", "%Y-%m-%d %H:%M:%S")
 ```
 
-天數相加
+## 天數相加
 
 ```python
 datetime.date.today() + datetime.timedelta(days=1)
 ```
 
-計算時間差
+## 計算時間差
 
 ```python
 (datetime.datetime(2015,1,13,12,0,0) - datetime.datetime.now()).total_seconds()
