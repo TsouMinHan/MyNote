@@ -16,6 +16,7 @@
   * [sqlite 設定資料庫](python/sqlite-she-ding-zi-liao-ku.md)
   * [traceback 套件](python/traceback-tao-jian.md)
   * [正規化](python/zheng-gui-hua.md)
+  * [schedule 套件](python/schedule-tao-jian.md)
 * [其他](qi-ta/README.md)
   * [Hexo 架站](qi-ta/hexo-jia-zhan/README.md)
     * [github pages + Hexo架設個人靜態部落格](qi-ta/hexo-jia-zhan/github-pages-+-hexo-jia-she-ge-ren-jing-tai-bu-luo-ge.md)
