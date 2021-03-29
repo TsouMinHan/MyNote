@@ -179,10 +179,42 @@ logger.addHandler(stream_handler)
 logger.addHandler(file_handler)
 ```
 
+## 使用顏色
+
+```python
+import logging
+
+class CustomFormatter(logging.Formatter):
+    """Logging Formatter to add colors and count warning / errors"""
+
+    grey = "\x1b[38;21m"
+    yellow = "\x1b[33;21m"
+    red = "\x1b[31;21m"
+    bold_red = "\x1b[31;1m"
+    reset = "\x1b[0m"
+    format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s (%(filename)s:%(lineno)d)"
+
+    FORMATS = {
+        logging.DEBUG: grey + format + reset,
+        logging.INFO: grey + format + reset,
+        logging.WARNING: yellow + format + reset,
+        logging.ERROR: red + format + reset,
+        logging.CRITICAL: bold_red + format + reset
+    }
+
+    def format(self, record):
+        log_fmt = self.FORMATS.get(record.levelno)
+        formatter = logging.Formatter(log_fmt)
+        return formatter.format(record)
+
+logger.setFormater(CustomFormatter())
+```
+
 ## 參考資料
 
 1. \*\*\*\*[**Python - 日誌 \(logging\) 模組**](https://titangene.github.io/article/python-logging.html)\*\*\*\*
 2. \*\*\*\*[**Python 學習筆記 : 日誌 \(logging\) 模組測試**](http://yhhuang1966.blogspot.com/2018/04/python-logging_24.html)\*\*\*\*
 3. \*\*\*\*[**logging — Logging facility for Python**](https://docs.python.org/3/library/logging.html#module-logging)\*\*\*\*
 4. \*\*\*\*[**Logging in Python - Real Python**](https://realpython.com/python-logging/)\*\*\*\*
+5. \*\*\*\*[**2021 solution, no additional packages required, Python 3**](https://stackoverflow.com/questions/384076/how-can-i-color-python-logging-output)\*\*\*\*
 
