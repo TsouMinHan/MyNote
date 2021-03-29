@@ -58,7 +58,7 @@ logging.critical("critical message")
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">#(asctime)s</td>
+      <td style="text-align:left">%(asctime)s</td>
       <td style="text-align:left">
         <p>&#x7576; LogRecord &#x5EFA;&#x7ACB;&#x6642;&#x7684;&#x6642;&#x9593;&#x683C;&#x5F0F;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;2021-03-27
           18:30:54,896</p>
@@ -151,6 +151,33 @@ logging.critical("critical message")
 | %P | PM 或 AM |
 | %M | 分鐘 00~59 |
 | %S | 秒 00~59 |
+
+## Handler
+
+可以自己定義記錄器，用於不同的情況下使用。
+
+```python
+import logging
+
+# 設定記錄器名稱
+logger = logging.getLogger(__name__)
+
+# StreamHandler 在 terminal 顯示的，FileHandler 儲存在檔案的
+stream_handler = logging.StreamHandler()
+file_handler = logging.FileHandler("log.txt")
+
+stream_handler.setLevel(logging.INFO)
+file_handler.setLevel(logging.INFO)
+
+stream_formater = logging.Formatter("%(asctime)s | %(levelname)s | Line: %(lineno)d | %(message)s")
+file_formater = logging.Formatter("%(asctime)s | %(levelname)s | %(message)s")
+
+stream_handler.setFormatter(stream_formater)
+file_handler.setFormatter(file_formater)
+
+logger.addHandler(stream_handler)
+logger.addHandler(file_handler)
+```
 
 ## 參考資料
 
