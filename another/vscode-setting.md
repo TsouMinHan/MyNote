@@ -77,6 +77,8 @@ Monokai 我的最愛。
 
 改成 on，若超過 rulers 設定的行數，會自行換行。
 
+![](../.gitbook/assets/rulers.png)
+
 ## 我的 VS code setting.json & Plugin
 
 finename：`settings.json`

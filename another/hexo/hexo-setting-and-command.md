@@ -145,7 +145,9 @@ scheme: Gemini
 
 ### 使用留言板
 
-到 [Disqus](https://disqus.com/) 點 Get Started，接著註冊帳號（我是用google的），接著點選I want to install Disqus on my site。 要進行些設定，Website Name 就是自定的名稱，會顯示在，會顯示在紅色箭頭處。 另外可以選擇語言，有中文的，但是我看參考來源他的留言板是簡體中文的，所以我選擇英文。
+到 [Disqus](https://disqus.com/) 點 Get Started，接著註冊帳號（我是用 google 的），接著點選 I want to install Disqus on my site。 要進行些設定，Website Name 就是自定的名稱，會顯示在，會顯示在紅色箭頭處。 另外可以選擇語言，有中文的，但是我看參考來源他的留言板是簡體中文的，所以我選擇英文。
+
+![](../../.gitbook/assets/hexo-1.png)
 
 接著把你輸入的Website Name複製到`_config.yaml`就好了。
 
@@ -212,13 +214,15 @@ npm install hexo-symbols-count-time
     language: deed.zh_TW  # 點開連結時會顯示繁中
 ```
 
+![](../../.gitbook/assets/hexo-2.png)
+
 ## Hexo指令
 
 ### 新增文章
 
 在`source/_posts`新增`post_name.md`
 
-打開terminal：
+打開 terminal：
 
 ```bash
 hexo new <post_name>
@@ -226,7 +230,7 @@ hexo new <post_name>
 
 ### 新增標籤頁面
 
-Terminal輸入指令：
+Terminal 輸入指令：
 
 ```bash
 hexo new page "tags"
@@ -244,7 +248,7 @@ hexo new page "tags"
 
 ### 新增分類頁面
 
-Terminal輸入指令：
+Terminal 輸入指令：
 
 ```bash
 hexo new page "categories"
@@ -262,7 +266,7 @@ hexo new page "categories"
 
 ### 新增關於頁面
 
-Terminal輸入指令
+Terminal 輸入指令
 
 ```bash
  hexo new page "about"
