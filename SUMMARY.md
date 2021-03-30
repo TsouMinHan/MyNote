@@ -39,4 +39,5 @@
     * [Day 3：Playing with CSS Variables and JS](javascript/javascrpt-30/day-3-playing-with-css-variables-and-js.md)
     * [Day 4：Array Cardio Day 1](javascript/javascrpt-30/day-4-array-cardio-day-1.md)
     * [Day 5：Flex Panel Gallery](javascript/javascrpt-30/day-5-flex-panel-gallery.md)
+    * [Day 6：Type Ahead](javascript/javascrpt-30/day-6-type-ahead.md)
 
