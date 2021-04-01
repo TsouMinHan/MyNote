@@ -186,3 +186,5 @@ code --install-extension wholroyd.jinja
 
    [Ask Question](https://stackoverflow.com/questions/ask)
 
+2. \*\*\*\*[**PyLint “Unable to import” error - how to set PYTHONPATH?**](https://stackoverflow.com/questions/1899436/pylint-unable-to-import-error-how-to-set-pythonpath)\*\*\*\*
+
