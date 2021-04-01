@@ -41,11 +41,20 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 
-if (not len(firebase_admin._apps)): # 檢查是否有連線到資料庫((根據參考的資料應該是這樣子沒有錯))
+if (not len(firebase_admin._apps)): # 檢查連線的資料庫數量 0 代表沒連線
     cred = credentials.Certificate("path/to/serviceAccount.json")
     firebase_admin.initialize_app(cred)
 
 db = firestore.client()
+```
+
+## 連接多個資料庫
+
+```python
+cred = credentials.Certificate("path/to/serviceAccount.json")
+firebase_admin.initialize_app(cred, name="server") # 連線命名
+
+db = firebase_admin.firestore.client(firebase_admin.get_app("server"))
 ```
 
 ## 集合和文件
@@ -99,4 +108,5 @@ doc_ref.update({"title": _ls})
 
 1. [check if a Firebase App is already initialized in python](https://stackoverflow.com/questions/44293241/check-if-a-firebase-app-is-already-initialized-in-python)
 2. [Google Firebase Document](https://firebase.google.com/docs/firestore/quickstart#python)
+3. [firebase\_admin module \| Firebase](https://firebase.google.com/docs/reference/admin/python/firebase_admin)
 

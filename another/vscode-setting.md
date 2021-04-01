@@ -79,6 +79,22 @@ Monokai 我的最愛。
 
 ![](../.gitbook/assets/rulers.png)
 
+## 取消 pylint import 錯誤提示
+
+修改 `settings.json`
+
+{% code title=".vscode/settings.json" %}
+```javascript
+{
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.mypyEnabled": true,
+    "python.pythonPath": "${workspaceFolder}/venv/bin/python",
+    "python.linting.pylintPath": "${workspaceFolder}/.venv/bin/pylint"
+}
+```
+{% endcode %}
+
 ## 我的 VS code setting.json & Plugin
 
 finename：`settings.json`
