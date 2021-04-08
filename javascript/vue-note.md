@@ -7,7 +7,7 @@ description: 覺得Vue似乎很好玩，就來學看看了，目前感覺不錯�
 ## 設定 Vue 物件\(?\)
 
 ```javascript
-<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.0-beta.20/vue.cjs.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.0-beta.20/vue.cjs.js"></script>
 //▲必須先匯入(?)，像BootStrap、JQuery那樣要這樣才可以使用他們的框架，關鍵字：cdn。
 
 let vm = new Vue({ // 可以直接 new Vue 前面省略
@@ -35,7 +35,7 @@ let vm = new Vue({ // 可以直接 new Vue 前面省略
             console.log()
         }
     },
-    ['obj.num'](){ //物件的屬性
+    ["obj.num"](){ //物件的屬性
 
     }   
 })
