@@ -81,16 +81,20 @@ Monokai 我的最愛。
 
 ## 取消 pylint import 錯誤提示
 
-修改 `settings.json`
+修改 `settings.json`，pylint [代碼清單](https://gist.github.com/xen/6334976)。
 
 {% code title=".vscode/settings.json" %}
 ```javascript
 {
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
+    "python.linting.pylintArgs": [
+        "--disable=E0401",
+        "--disable=C0111"
+    ],
     "python.linting.mypyEnabled": true,
-    "python.pythonPath": "${workspaceFolder}/venv/bin/python",
-    "python.linting.pylintPath": "${workspaceFolder}/.venv/bin/pylint"
+    "python.pythonPath": "/Users/tsouminhan/Documents/server/venv/bin/python",
+    // "python.linting.pylintPath": "${workspaceFolder}/.venv/bin/pylint"
 }
 ```
 {% endcode %}
