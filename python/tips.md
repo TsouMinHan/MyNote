@@ -42,8 +42,8 @@ def read_json(path):
     return data
 # 寫檔案
 def save_json(path, dc={})
-with open(path, "w", encoding="utf-8") as json_file:
-    json.dump(dc, json_file)
+    with open(path, "w", encoding="utf-8") as json_file:
+        json.dump(dc, json_file)
 ```
 
 ## 裝飾器 - 顯示執行狀況
