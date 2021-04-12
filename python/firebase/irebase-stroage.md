@@ -47,7 +47,6 @@ image_blob = bucket.blob("/") # 設定要上傳的檔名，要用反斜線，不
 image_path = "<local_path>/image.png"
 image_blob = bucket.blob("<image_name>")
 image_blob.upload_from_filename(image_path)
-# upload_from_string("YOUR_STRING") 可以不用存成 txt 就上傳 txt
 ```
 
 ## 將上傳檔案設定為公開
@@ -56,7 +55,7 @@ image_blob.upload_from_filename(image_path)
 
 若要上傳時就設定公開，請先上傳檔案後再執行 `make_public()`，否則會找不到檔案。
 
-使用這個方法時遇到一個問題，若再次上傳相同檔名，內容無法更新（測試下來大約一小時更新一次），即使把檔案刪除掉了，該網址還是可以讀取到第一次上傳時的那份檔案。
+使用這個方法時遇到一個問題，若再次上傳相同檔名，內容無法更新，即使把檔案刪除掉了，該網址還是可以讀取到第一次上傳時的那份檔案。
 
 ```python
 blob.make_public() # 將圖片設定為開放
@@ -108,7 +107,7 @@ blob.download_to_filename(filename)
 
 [尝试执行 Google 云 API 时 GRPC 中出现异常](https://www.cnpython.com/qa/575109) [使用 pyinstaller 将导入 Google 客户端库的程序转换为.exe](https://www.codenong.com/afb5164326a2eb6f6259/)
 
-## 資料來源
+### 資料來源
 
 1. [Image Upload to Firebase Storage with Python](https://medium.com/@preveenraj/image-upload-to-firebase-storage-with-python-ebf18c615f34)
 2. [How to retrieve image from Firebase Storage using Python?](https://stackoverflow.com/questions/53304517/how-to-retrieve-image-from-firebase-storage-using-python)
