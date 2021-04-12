@@ -33,7 +33,7 @@ client = storage.Client()
 bucket = client.get_bucket("<your firebase storage path>")
 ```
 
-## 上傳圖片
+## 上傳檔案
 
 ```python
 # posting to firebase storage
@@ -49,9 +49,21 @@ image_blob.upload_from_filename(image_path)
 
 若要上傳時就設定公開，請先上傳檔案後再執行 `make_public()`，否則會找不到檔案。
 
+使用這個方法時遇到一個問題，若再次上傳相同檔名，內容無法更新，即使把檔案刪除掉了，該網址還是可以讀取到第一次上傳時的那份檔案。
+
 ```python
 blob.make_public() # 將圖片設定為開放
 blob.public_url # 取得網址
+```
+
+## 刪除檔案
+
+```python
+blob = self.bucket.blob(f"{FILE_NAME}")
+blob.delete()
+
+# bucket 也可以使用 delete()，但會把整個 Storage 刪除，所有檔案都會不見
+# bucket.delete()
 ```
 
 ## 列出所有文件
@@ -83,4 +95,5 @@ blob.download_to_filename(filename)
 6. \*\*\*\*[**Find the url of uploaded file, firebase storage + python**](https://stackoverflow.com/questions/52451215/find-the-url-of-uploaded-file-firebase-storage-python)\*\*\*\*
 7. [Blobs / Objects — google-cloud-storage documentation](https://googleapis.dev/python/storage/latest/blobs.html) 
 8. [Buckets — google-cloud-storage documentation ](https://googleapis.dev/python/storage/latest/buckets.html)
+9. [Admin Cloud Storage API簡介 \| Firebase](https://firebase.google.com/docs/storage/admin/start#python)
 
