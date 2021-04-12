@@ -47,6 +47,7 @@ image_blob = bucket.blob("/") # 設定要上傳的檔名，要用反斜線，不
 image_path = "<local_path>/image.png"
 image_blob = bucket.blob("<image_name>")
 image_blob.upload_from_filename(image_path)
+# upload_from_string("YOUR_STRING") 可以不用存成 txt 就上傳 txt
 ```
 
 ## 將上傳檔案設定為公開
