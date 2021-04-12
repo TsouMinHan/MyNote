@@ -1,6 +1,25 @@
 # 上傳圖片至 Firebase Stroage
 
-## 上傳圖片
+##  連線至 Storage
+
+### 方法一
+
+```python
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import storage
+
+cred = credentials.Certificate('path/to/service_account_key.json')
+firebase_admin.initialize_app(cred, {
+    'storageBucket': '<BUCKET_NAME>.appspot.com'
+})
+
+bucket = storage.bucket()
+# 如果有設定 app 的名稱的話，使用下面這個指令
+# bucket = storage.bucket(app=firebase_admin.get_app("APP_NAME"))
+```
+
+### 方法二
 
 ```python
 from google.cloud import storage
@@ -12,7 +31,11 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="<add your credentials path>"
 firebase = firebase.FirebaseApplication("<your firebase database path>")
 client = storage.Client()
 bucket = client.get_bucket("<your firebase storage path>")
+```
 
+## 上傳圖片
+
+```python
 # posting to firebase storage
 image_blob = bucket.blob("/") # 設定要上傳的檔名，要用反斜線，不然不會建立資料夾
 # blob.delete() # 刪除圖片
