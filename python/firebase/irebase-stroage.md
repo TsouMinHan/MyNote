@@ -1,6 +1,10 @@
 # 上傳圖片至 Firebase Stroage
 
-##  連線至 Storage
+##  設定 Storage 權限
+
+![](../../.gitbook/assets/firebase-storage-1.png)
+
+## 連線至 Storage
 
 ### 方法一
 
@@ -47,6 +51,8 @@ image_blob.upload_from_filename(image_path)
 
 ## 將上傳檔案設定為公開
 
+### 方法一
+
 若要上傳時就設定公開，請先上傳檔案後再執行 `make_public()`，否則會找不到檔案。
 
 使用這個方法時遇到一個問題，若再次上傳相同檔名，內容無法更新，即使把檔案刪除掉了，該網址還是可以讀取到第一次上傳時的那份檔案。
@@ -56,6 +62,21 @@ blob.make_public() # 將圖片設定為開放
 blob.public_url # 取得網址
 ```
 
+### 方法二
+
+我的理解是在上傳檔案時設定好 token，接下來就可以透過網址訪問內容了，另外若在權限部分設定所有人都可以 read 的話，網址的部分可以不用帶 token 參數，也就不需要 `firebaseStorageDownloadTokens` 了。
+
+網址大概長這個樣子：[https://firebasestorage.googleapis.com/v0/b/fpdb-e9abb.appspot.com/o/SignInRecord%2F2021-04-12.txt?alt=media&token=2cf3e07a-076c-48f4-91e9-caf747208f02](https://firebasestorage.googleapis.com/v0/b/fpdb-e9abb.appspot.com/o/SignInRecord%2F2021-04-12.txt?alt=media&token=2cf3e07a-076c-48f4-91e9-caf747208f02)
+
+如果檔名有規律的話只要更改檔名就可以了。
+
+```python
+from uuid import uuid4
+blob = bucket.blob(f"{FILE_NAME}")
+blob.metadata = {"firebaseStorageDownloadTokens": uuid4()}
+blob.upload_from_filename(file)
+```
+
 ## 刪除檔案
 
 ```python
@@ -63,6 +84,7 @@ blob = self.bucket.blob(f"{FILE_NAME}")
 blob.delete()
 
 # bucket 也可以使用 delete()，但會把整個 Storage 刪除，所有檔案都會不見
+# 目前放過檔名以及網址做為參數，都是把整個 Storage 刪除掉
 # bucket.delete()
 ```
 
