@@ -16,5 +16,5 @@ description: >-
 
 ## 建立 Cloud Function
 
-建立函式 &gt; 填一些基本內容 &gt; 下一步，選擇自己要的程式語言 &gt; 上傳 zip 檔案，記得主程式要用 main（Python），要執行的函式要帶入 event, content 參數。
+建立函式 &gt; 填一些基本內容 &gt; 下一步，選擇自己要的程式語言 &gt; 上傳 zip 檔案，記得主程式要用 main（Python），要執行的函式要帶入 event, context 參數。
 
