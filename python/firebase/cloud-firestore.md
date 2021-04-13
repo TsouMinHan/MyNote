@@ -87,8 +87,14 @@ for doc in docs:
 ## 刪除資料
 
 ```python
-doc_ref = db.collection(u"users")
+doc_ref = db.collection(u"users").documetn(u"alovelace")
 doc_ref.delete()
+
+# 刪除集合所有文件
+docs = db.collection(u"users").stream()
+
+for doc in docs:
+    doc.reference.delete()
 ```
 
 ## 修改資料
