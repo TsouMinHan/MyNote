@@ -42,4 +42,5 @@
     * [Day 4：Array Cardio Day 1](javascript/javascrpt-30/day-4-array-cardio-day-1.md)
     * [Day 5：Flex Panel Gallery](javascript/javascrpt-30/day-5-flex-panel-gallery.md)
     * [Day 6：Type Ahead](javascript/javascrpt-30/day-6-type-ahead.md)
+    * [Day 7：Array Cardio Day 2](javascript/javascrpt-30/day-7-array-cardio-day-2.md)
 
