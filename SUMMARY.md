@@ -4,7 +4,7 @@
 * [Python](python/README.md)
   * [Firebase 相關](python/firebase/README.md)
     * [Cloud Firestore 新增刪除修改（CRUD）](python/firebase/cloud-firestore.md)
-    * [上傳圖片至 Firebase Stroage](python/firebase/irebase-stroage.md)
+    * [Firebase Stroage 操作](python/firebase/firebase-stroage.md)
   * [爬蟲相關](python/web-scraping/README.md)
     * [asyncio 同步執行、下載圖片](python/web-scraping/asyncio.md)
     * [BeautifulSoup](python/web-scraping/beautifulsoup.md)
