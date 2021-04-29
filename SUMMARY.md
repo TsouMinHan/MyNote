@@ -18,6 +18,7 @@
   * [正規化](python/regex.md)
   * [schedule 套件](python/schedule.md)
   * [logging 套件](python/logging.md)
+  * [Python 錦囊妙計, 3/e \(Python Cookbook, 3/e\)](python/python-cookbook.md)
 * [其他](another/README.md)
   * [Hexo 架站](another/hexo/README.md)
     * [github pages + Hexo 架設個人靜態部落格](another/hexo/github-pages-+-hexo.md)
