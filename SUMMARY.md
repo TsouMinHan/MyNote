@@ -28,6 +28,7 @@
   * [VSCode 快捷鍵](another/vscode-hotkey.md)
   * [安裝 window 10 IOT core 在樹莓派 3，並部署範例程式](another/install-win10-iot-core-on-raspberrypi3.md)
   * [Google 定時排程](another/google-ding-shi-pai-cheng.md)
+  * [GAE 部署](another/gae-bu-shu.md)
 * [讀書心得](reflection/README.md)
   * [Soft Skills 軟實力｜軟體開發人員的生存手冊](reflection/soft-skills.md)
   * [軟體工程師職場技巧](reflection/soft-engineer-work-skill.md)

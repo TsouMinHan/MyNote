@@ -48,7 +48,6 @@ image_path = "<local_path>/image.png"
 image_blob = bucket.blob("<image_name>")
 image_blob.upload_from_filename(image_path)
 # upload_from_string("YOUR_STRING") 可以不用存成 txt 就上傳 txt
-# upload_from_string(buf, content_type="image/jpg") 直接將 byte 上傳成圖片
 ```
 
 ## 將上傳檔案設定為公開
