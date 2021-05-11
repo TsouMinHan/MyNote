@@ -19,6 +19,7 @@
   * [schedule 套件](python/schedule.md)
   * [logging 套件](python/logging.md)
   * [Python 錦囊妙計, 3/e \(Python Cookbook, 3/e\)](python/python-cookbook.md)
+  * [Flask 不存圖片 修改圖片大小](python/flask-bu-cun-tu-pian-xiu-gai-tu-pian-da-xiao.md)
 * [其他](another/README.md)
   * [Hexo 架站](another/hexo/README.md)
     * [github pages + Hexo 架設個人靜態部落格](another/hexo/github-pages-+-hexo.md)
