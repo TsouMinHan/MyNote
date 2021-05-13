@@ -40,6 +40,7 @@
   * [輸出 jar](java/output-jar.md)
   * [播放音樂](java/bo-fang-yin-lao.md)
 * [JavaScript](javascript/README.md)
+  * [壓縮圖片後傳至伺服器](javascript/resize-image-before-upload.md)
   * [CKEditor 4 網頁文字編輯器](javascript/ckeditor-4.md)
   * [Vue 筆記](javascript/vue-note.md)
   * [JavaScrpt 30](javascript/javascrpt-30/README.md)
