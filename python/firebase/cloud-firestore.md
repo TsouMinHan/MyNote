@@ -59,15 +59,11 @@ db = firebase_admin.firestore.client(firebase_admin.get_app("server"))
 
 ## 集合和文件
 
-Cloud Firestore 的資料格是像是資料夾一樣，每個資料夾是一個集合（Collection，每個資料夾下可以有很多個文件（Document），每個文件底下可以有很多資料，而在文件底下又可以開新的集合，這樣子重複下去。 當時在學習時覺得這樣子的概念很抽象，但是實際創建資料並且去讀取，會發現很簡單。
+Cloud Firestore的資料格是像是資料夾一樣，每個資料夾是一個集合（Collection，每個資料夾下可以有很多個文件（Document），每個文件底下可以有很多資料，而在文件底下又可以開新的集合，這樣子重複下去。 當時在學習時覺得這樣子的概念很抽象，但是實際創建資料並且去讀取，會發現很簡單。
 
-~~文件的 key 不要使用 `-`，雖然可以順利新增，但若要修改時會出錯，原因我目前不知道，這樣會導致以後要修改時，必須先把資料抓下來在整個覆蓋過去，會造成多餘的步驟。~~
+文件的 key 不要使用 `-`，雖然可以順利新增，但若要修改時會出錯，原因我目前不知道，這樣會導致以後要修改時，必須先把資料抓下來在整個覆蓋過去，會造成多餘的步驟。
 
-[解決 key 不能有 - 的方法](cloud-firestore.md#jie-jue-key-bu-neng-you-de-fang-fa)
-
-## 資料處理
-
-### 新增資料
+## 新增資料
 
 ```python
 doc_ref = db.collection(u"users").document(u"alovelace")    # 讀取"users"集合裡的"alovelace"文件
@@ -79,7 +75,7 @@ doc_ref.set({
 })
 ```
 
-### 讀取資料
+## 讀取資料
 
 ```python
 users_ref = db.collection(u"users")
@@ -90,7 +86,7 @@ for doc in docs:
     print(u"{} => {}".format(doc.id, doc.to_dict()))
 ```
 
-### 刪除資料
+## 刪除資料
 
 ```python
 doc_ref = db.collection(u"users").documetn(u"alovelace")
@@ -103,49 +99,22 @@ for doc in docs:
     doc.reference.delete()
 ```
 
-### 修改資料
+## 修改資料
 
-如果是新的 key 則是新增，例如本來文件內就有 title 的 key 執行後會修改值，但若沒有 title的話就是直接新增。
-
-```python
-doc_ref = db.collection(u"users").document(u"alovelace")
-doc_ref.update({"title": "title"})
-```
-
-## 解決 key 不能有 `-` 的方法
-
-用 db.field\_path\(\) ，資料忘記在哪邊查到的了 ...
+如果是新的key則是新增，例如本來文件內就有title的key執行後會修改值，但若沒有title的話就是直接新增。
 
 ```python
 doc_ref = db.collection(u"users").document(u"alovelace")
-doc_ref.update({db.field_path("main-title"): "main_title"})
+doc_ref.update({"title": _ls})
 ```
 
-## 批次處理
+## 結論
 
-```python
-batch = db.batch()
+基本上我只使用這幾個功能，使用起來非常的方便。
 
-# Set the data for NYC
-nyc_ref = db.collection(u'cities').document(u'NYC')
-batch.set(nyc_ref, {u'name': u'New York City'})
-
-# Update the population for SF
-sf_ref = db.collection(u'cities').document(u'SF')
-batch.update(sf_ref, {u'population': 1000000})
-
-# Delete DEN
-den_ref = db.collection(u'cities').document(u'DEN')
-batch.delete(den_ref)
-
-# Commit the batch
-batch.commit()
-```
-
-## 參考資料
+### 參考資料
 
 1. [check if a Firebase App is already initialized in python](https://stackoverflow.com/questions/44293241/check-if-a-firebase-app-is-already-initialized-in-python)
 2. [Google Firebase Document](https://firebase.google.com/docs/firestore/quickstart#python)
 3. [firebase\_admin module \| Firebase](https://firebase.google.com/docs/reference/admin/python/firebase_admin)
-4. [事務和批量寫入 \| Firebase](https://firebase.google.com/docs/firestore/manage-data/transactions)
 

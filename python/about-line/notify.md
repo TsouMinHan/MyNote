@@ -1,5 +1,32 @@
 # Notify
 
+## 傳送訊息 + 圖片
+
+加入 `imageThumbnail`, `imageFullsize` 就可以在傳送文字訊息時一併傳送圖片。
+
+`imageThumbnail`：縮圖顯示圖片
+
+`imageFullsize`：完整圖片
+
+這邊的圖片必須使用網址的方式傳遞。
+
+```python
+def send_msg(msg, token, img_url=""):
+    headers = {
+        "Authorization": "Bearer " + token, 
+        "Content-Type" : "application/x-www-form-urlencoded"
+    }
+    payload = {
+        "message": msg,
+        "imageThumbnail": img_url,
+        "imageFullsize": img_url
+    }
+
+    res = requests.post("https://notify-api.line.me/api/notify", headers = headers, params = payload)
+
+    return res.status_code
+```
+
 ## 傳送圖片
 
 一定要傳送 `message`，不然沒辦法顯示圖片。  
@@ -20,4 +47,8 @@ def send_image(message, img):
     )
     return r.status_code
 ```
+
+## 參考網址
+
+1. [自建 LINE Notify 訊息通知 - OXXO.STUDIO](https://www.oxxostudio.tw/articles/201806/line-notify.html)
 
