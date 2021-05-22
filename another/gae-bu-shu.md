@@ -21,7 +21,7 @@ opencv-python--headless
 
 ## 時間
 
-在 GAE 上預設時間是 UTC+0，我也不清楚要怎麼修改，目前就是使用 `datetime` [改時區的方式](../python/datetime.md#zhuan-huan-shi-ou)。
+在 GAE 上預設時間是 UTC+0，我也不清楚要怎麼修改，目前就是使用 `datetime` [改時區的方式](../python/package/datetime.md#zhuan-huan-shi-ou)。
 
 ## 參考資料
 
