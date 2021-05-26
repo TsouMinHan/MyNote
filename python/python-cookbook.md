@@ -110,6 +110,10 @@ print('countdown is running')
 
 在 Terminal 中輸入密碼這樣，會自動隱藏你輸入的密碼。
 
+{% hint style="danger" %}
+有些系統可能沒辦法隱藏密碼
+{% endhint %}
+
 ```python
 import getpass
 
@@ -120,6 +124,7 @@ def svc_login(user, pwd):
 
 
 user = getpass.getuser() # 電腦環境的使用者名稱
+# user = input("insert your username:")
 passwd = getpass.getpass()
 
 if svc_login(user, passwd): 
