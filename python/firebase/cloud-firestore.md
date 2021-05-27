@@ -112,6 +112,18 @@ doc_ref = db.collection(u"users").document(u"alovelace")
 doc_ref.update({"title": "title"})
 ```
 
+針對陣列資料進行新增、刪除
+
+```python
+city_ref = db.collection(u'cities').document(u'DC')
+
+# Atomically add a new region to the 'regions' array field.
+city_ref.update({u'regions': firestore.ArrayUnion([u'greater_virginia'])})
+
+# // Atomically remove a region from the 'regions' array field.
+city_ref.update({u'regions': firestore.ArrayRemove([u'east_coast'])})
+```
+
 ## 解決 key 不能有 `-` 的方法
 
 用 db.field\_path\(\) ，資料忘記在哪邊查到的了 ...

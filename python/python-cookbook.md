@@ -106,30 +106,7 @@ print('countdown is running')
 
 用 `queue`
 
-### 密碼輸入工具
-
-在 Terminal 中輸入密碼這樣，會自動隱藏你輸入的密碼。
-
-{% hint style="danger" %}
-有些系統可能沒辦法隱藏密碼
-{% endhint %}
-
-```python
-import getpass
-
-def svc_login(user, pwd):
-    if user == "tsouminhan" and pwd == "123":
-        return True
-    return False
+### 鎖 thread 防止 race conditions
 
 
-user = getpass.getuser() # 電腦環境的使用者名稱
-# user = input("insert your username:")
-passwd = getpass.getpass()
-
-if svc_login(user, passwd): 
-    print('Yay!')
-else:
-    print('Boo!')
-```
 
