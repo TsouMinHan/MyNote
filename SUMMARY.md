@@ -19,7 +19,7 @@
     * [Line Bot](python/about-line/line-bot.md)
     * [Notify](python/about-line/notify.md)
   * [PyQt5 相關](python/pyqt5/README.md)
-    * [建立視窗](python/pyqt5/bulid-window.md)
+    * [一些指令](python/pyqt5/bulid-window.md)
   * [Windows10 Python3.7 dlib 人臉辨識安裝](python/win10-python3.7-dlib.md)
   * [打包成 exe 檔 & 虛擬環境](python/pyinstaller.md)
   * [好用卻常忘記的指令](python/tips.md)
