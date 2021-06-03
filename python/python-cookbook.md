@@ -106,7 +106,119 @@ print('countdown is running')
 
 用 `queue`
 
-### 鎖 thread 防止 race conditions
+### 密碼輸入工具
+
+在 Terminal 中輸入密碼這樣，會自動隱藏你輸入的密碼。
+
+{% hint style="danger" %}
+有些系統可能沒辦法隱藏密碼
+{% endhint %}
+
+```python
+import getpass
+
+def svc_login(user, pwd):
+    if user == "tsouminhan" and pwd == "123":
+        return True
+    return False
 
 
+user = getpass.getuser() # 電腦環境的使用者名稱
+# user = input("insert your username:")
+passwd = getpass.getpass()
+
+if svc_login(user, passwd): 
+    print('Yay!')
+else:
+    print('Boo!')
+```
+
+## 打開瀏覽器網頁
+
+```python
+import webbrowser
+
+webbrowser.open("http://www.python.org")
+webbrowser.open_new("http://www.python.org")
+webbrowser.open_new_tab("http://www.python.org")
+
+c = webbrowser.get('firefox')
+c.open("http://www.python.org")
+```
+
+## 加快程式執行速度
+
+### 使用 function
+
+值些寫程式碼的話，變數會是 global，用 function 變數會是 local，local 速度 &gt; global。
+
+### 導入部分套件
+
+`import math` 比 `from math import sqrt` 來得慢，導入太多東西了，自然就比較慢。
+
+### Understand locality of variables
+
+```python
+import math
+
+# faster
+def compute_roots(nums):
+    sqrt = math.sqrt
+    result = []
+    result_append = result.append
+    for n in nums:
+        result_append(sqrt(n))
+    return result
+
+# slower
+def compute_roots(nums):
+    result = []
+    result_append = result.append
+    for n in nums:
+        result_append(math.sqrt(n))
+    return result
+```
+
+```python
+# Slower
+class SomeClass:
+...
+    def method(self):
+        for x in s:
+            op(self.value)
+
+# Faster
+class SomeClass:
+...
+    def method(self):
+        value = self.value
+            for x in s:
+            op(value)
+```
+
+### 避免不必要的抽象
+
+`print` 的速度 `A.x` 是 `A.y` 的四倍多，所以在不必要的情況下可以不用 `@property`。
+
+我才想說來試試看這樣子的寫法的說 ...，但看到書上說的很有到底，不一定要將其他語言的寫法挪用到拍森上，就參考一下吧。
+
+```python
+class A:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    @property
+    def y(self):
+        return self._y
+        
+    @y.setter
+    def y(self, value):
+        self._y = value
+```
+
+### 使用內建的 containers
+
+list, dict, tuple, set 等等，不一定要自己寫。
+
+### 避免不必要的資料
 
