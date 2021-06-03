@@ -110,8 +110,56 @@ class View(QtWidgets.QWidget):
         self.setWindowFlags(Qt.FramelessWindowHint)
 ```
 
+## 取得螢幕解析度
+
+```python
+from PyQt5.QtWidgets import QApplication
+
+desktop = QApplication.desktop()
+
+screenRect = self.desktop.screenGeometry()
+height = self.screenRect.height()
+
+```
+
+## 右鍵選單
+
+```python
+from PyQt5 import QtWidgets
+from PyQt5.QtWidgets import QMenu
+from PyQt5.QtCore import Qt
+
+class View(QtWidgets.QWidget):
+    def __init__(self):
+        super(View, self).__init__()
+        
+        self.init()
+
+    def init(self):
+        self.setContextMenuPolicy(Qt.CustomContextMenu)
+        self.customContextMenuRequested.connect(self.right_menu)
+
+    def right_menu(self, pos):
+        menu = QMenu()
+
+        # Add menu options
+        hello_option = menu.addAction('Hello World')
+        goodbye_option = menu.addAction('GoodBye')
+        exit_option = menu.addAction('Exit')
+
+        # Menu option events
+        hello_option.triggered.connect(lambda: print('Hello World'))
+        goodbye_option.triggered.connect(lambda: print('Goodbye'))
+        exit_option.triggered.connect(lambda: exit())
+
+        # Position
+        menu.exec_(self.mapToGlobal(pos))
+```
+
 ## 參考資料
 
 1. [PyQt5之MVC模式\_peixin\_huang的博客-CSDN博客](https://blog.csdn.net/peixin_huang/article/details/104309003)
 2. [【转】python--pyqt窗体背景透明的两种应用\_安先生还是没名字的博客-CSDN博客\_python窗体背景透明](https://blog.csdn.net/qiaokelinaicha/article/details/71914833)
+3. [pyqt5获取显示器的分辨率\_pursuit\_zhangyu的博客-CSDN博客\_pyqt5获取屏幕大小](https://blog.csdn.net/pursuit_zhangyu/article/details/83508025)
+4. [PyQt5 使用右鍵打開菜單選項 - Clay-Technology World](https://clay-atlas.com/blog/2020/02/14/pyqt5-chinese-tutorial-right-menu-options/)
 
