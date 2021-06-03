@@ -156,10 +156,38 @@ class View(QtWidgets.QWidget):
         menu.exec_(self.mapToGlobal(pos))
 ```
 
+### 選單中的分類
+
+```python
+...
+
+ def right_menu(self, pos):
+        menu = QMenu()
+
+        # Add menu options
+        hello_option = menu.addAction('Hello World')
+        goodbye_option = menu.addAction('GoodBye')
+        exit_option = menu.addAction('Exit')
+        
+        second = menu.addMenu("second Menu") 
+        actionD = second.addAction("D")
+        actionE = second.addAction("E")
+
+        # Menu option events
+        hello_option.triggered.connect(lambda: print('Hello World'))
+        goodbye_option.triggered.connect(lambda: print('Goodbye'))
+        exit_option.triggered.connect(lambda: exit())
+
+        # Position
+        menu.exec_(self.mapToGlobal(pos))
+
+```
+
 ## 參考資料
 
 1. [PyQt5之MVC模式\_peixin\_huang的博客-CSDN博客](https://blog.csdn.net/peixin_huang/article/details/104309003)
 2. [【转】python--pyqt窗体背景透明的两种应用\_安先生还是没名字的博客-CSDN博客\_python窗体背景透明](https://blog.csdn.net/qiaokelinaicha/article/details/71914833)
 3. [pyqt5获取显示器的分辨率\_pursuit\_zhangyu的博客-CSDN博客\_pyqt5获取屏幕大小](https://blog.csdn.net/pursuit_zhangyu/article/details/83508025)
 4. [PyQt5 使用右鍵打開菜單選項 - Clay-Technology World](https://clay-atlas.com/blog/2020/02/14/pyqt5-chinese-tutorial-right-menu-options/)
+5. [PyQt按钮右键菜单\_酒醉东坡的专栏-CSDN博客\_pyqt 右键菜单](https://blog.csdn.net/jiuzuidongpo/article/details/46507403)
 
