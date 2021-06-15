@@ -169,18 +169,23 @@ code --list-extensions | % { "code --install-extension $_" }
 我目前安裝的套件
 
 ```bash
-code --install-extension CoenraadS.bracket-pair-colorizer
-code --install-extension cstrap.flask-snippets
+code --install-extension christian-kohler.path-intellisense
+code --install-extension CoenraadS.bracket-pair-colorizer   
 code --install-extension Gruntfuggly.todo-tree
 code --install-extension hoovercj.vscode-power-mode
 code --install-extension JakeWilson.vscode-cdnjs
+code --install-extension JerryHong.autofilename
+code --install-extension lonefy.vscode-JS-CSS-HTML-formatter
 code --install-extension ms-python.python
+code --install-extension ms-python.vscode-pylance
 code --install-extension ms-toolsai.jupyter
+code --install-extension octref.vetur
 code --install-extension oderwat.indent-rainbow
 code --install-extension shalldie.background
 code --install-extension shd101wyy.markdown-preview-enhanced
 code --install-extension SirTori.indenticator
-code --install-extension vscode-icons-team.vscode-icons     
+code --install-extension streetsidesoftware.code-spell-checker
+code --install-extension vscode-icons-team.vscode-icons
 code --install-extension wholroyd.jinja
 ```
 
