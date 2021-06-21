@@ -1,5 +1,13 @@
 # GAE 部署
 
+## GAE 指令
+
+`gcloud projects list`: 列出現有的專案
+
+`gcloud config set project <project-id>`: 切換專案
+
+`gcloud app deploy app.yaml`: 部署
+
 ## 部署前動作
 
 `pip freeze > requirements.txt`
