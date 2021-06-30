@@ -8,6 +8,7 @@
     * [traceback 套件](python/package/traceback.md)
     * [datetime](python/package/datetime.md)
     * [pathlib](python/package/pathlib.md)
+    * [kivy](python/package/kivy.md)
   * [Firebase 相關](python/firebase/README.md)
     * [Cloud Firestore 新增刪除修改（CRUD）](python/firebase/cloud-firestore.md)
     * [Firebase Stroage 操作](python/firebase/firebase-stroage.md)
