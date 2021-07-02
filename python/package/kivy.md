@@ -28,6 +28,8 @@ if __name__ == "__main__":
 
 在 `colab` 上打包，也可以在自己的電腦安裝環境，但我覺得太麻煩了。這個方法是爬[文章](https://towardsdatascience.com/3-ways-to-convert-python-app-into-apk-77f4c9cd55af)找到的，裡面也有提供其他方法，但沒有多加講解指令的意義，我自己是使用 colab 打包，記得要安裝 kivy 套件。
 
+在編譯之前先修改 buildozer.spec 文件，要導入的套件、檔案等等。
+
 ```bash
 !pip install buildozer
 
