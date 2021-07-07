@@ -210,6 +210,16 @@ class CustomFormatter(logging.Formatter):
 logger.setFormater(CustomFormatter())
 ```
 
+## 定時更新 log 檔案
+
+```python
+from logging.handlers import TimedRotatingFileHandler
+
+# ...
+file_handler = TimedRotatingFileHandler("./log/app.log", when="midnight", interval=1)
+# ...
+```
+
 ## 參考資料
 
 1. \*\*\*\*[**Python - 日誌 \(logging\) 模組**](https://titangene.github.io/article/python-logging.html)\*\*\*\*
