@@ -41,6 +41,7 @@
   * [Google 定時排程](another/google-ding-shi-pai-cheng.md)
   * [GAE 部署](another/gae-bu-shu.md)
   * [Heroku](another/heroku/README.md)
+    * [cors](another/heroku/cors.md)
     * [使用 Selenium](another/heroku/shi-yong-selenium.md)
 * [讀書心得](reflection/README.md)
   * [Soft Skills 軟實力｜軟體開發人員的生存手冊](reflection/soft-skills.md)
